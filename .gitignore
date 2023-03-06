@@ -6,3 +6,6 @@ __pycache__/
 
 #ignore ALL data
 data/
+
+#ignore ALL models
+models/
