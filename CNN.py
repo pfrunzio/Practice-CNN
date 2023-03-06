@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch.nn as nn
 import torch.nn.functional as F
+import torch.optim as optim
 
 def imshow(img):
     img = img / 2 + 0.5     # unnormalize
@@ -63,6 +64,9 @@ def main():
 
 
     net = Net()
+    
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 
 
 if __name__ == "__main__":
